@@ -1,0 +1,55 @@
+**Role:**
+You are an expert Senior Frontend Developer and UI/UX Designer specializing in corporate industrial websites. You build high-performance, responsive, and accessible websites.
+
+**Goal:**
+Build a professional single-page website (landing page) for "Al-Nouran International Company for Electrical and Electromechanical Works." The site must communicate trust, industrial strength, and precision.
+
+**Tech Stack:**
+- Framework: React (Next.js or Vite)
+- Styling: Tailwind CSS (crucial for modern styling)
+- Icons: Lucide React (for industrial icons)
+- Animation: Framer Motion (for subtle, professional entrance animations)
+- Fonts: 'Inter' or 'Montserrat' (Google Fonts) for a clean, engineered look.
+
+**Design System (Theme: Industrial Powerhouse):**
+- Primary Color: Deep Navy Blue (approx hex: #0f172a or #1e3a8a) - Represents corporate trust.
+- Secondary Color: Industrial Silver/Light Grey (approx hex: #f1f5f9) - Represents machinery/steel.
+- Accent Color: Electric Amber/Gold (approx hex: #f59e0b) - Represents energy and sparks. Use this for buttons and highlights.
+- Aesthetic: Clean lines, generous whitespace, card-based layouts for services, and strong typography.
+
+**Website Structure & Content:**
+
+1. **Header/Navbar:**
+   - Left: Logo text "Al-Nouran" (Bold, Navy)
+   - Right: Links (Home, About Us, Industries, Contact)
+   - CTA Button: "Get a Quote" (Accent Color)
+
+2. **Hero Section:**
+   - Background: A dark overlay over an industrial image (abstract machinery or factory).
+   - Headline: "Empowering Industry with Precision & Power."
+   - Sub-headline: "Your premier partner for high-grade electrical hardware, CNC machinery, and industrial solutions."
+   - Button: "Explore Our Solutions"
+
+3. **About Us Section:**
+   - Title: "Who We Are"
+   - Text: "At Al-Nouran International Company, we bridge the gap between global innovation and local industry. We specialize in importing and supplying top-tier electrical hardware, electromechanical systems, and heavy machinery. Our mission is to equip factories and industrial sectors with the reliable technology they need to operate efficiently."
+
+4. **Industries We Serve (Grid Layout with Icons):**
+   - *Card 1: Oil & Gas.* Text: "Trusted supplier for Private & Government sectors. Providing high-performance welding equipment and machinery for infrastructure projects."
+   - *Card 2: Furniture Manufacturing.* Text: "Supplying state-of-the-art CNC woodworking machinery and spare parts for precision furniture production."
+   - *Card 3: Steel & Heavy Industry.* Text: "Electromechanical hardware and heavy-duty processing machinery for metal fabrication."
+   - *Card 4: Economic Free Zones.* Text: "Industrial hardware and logistical equipment solutions supporting rapid manufacturing growth."
+
+5. **Why Choose Us (Bullet points with checkmarks):**
+   - Global Sourcing Capabilities
+   - After-Sales Support & Spare Parts
+   - Specialized in CNC & Welding Tech
+
+6. **Footer:**
+   - Company Name: Al-Nouran International Company
+   - Columns: Quick Links, Contact Info (Placeholder Address/Email), Copyright 2024.
+
+**Implementation Instructions:**
+- Ensure the site is fully responsive (Mobile first).
+- Use high-quality placeholders for images (use Unsplash URLs relevant to 'industry', 'factory', 'welding', 'engineering').
+- Make the 'Call to Action' buttons stand out using the Accent Color.
