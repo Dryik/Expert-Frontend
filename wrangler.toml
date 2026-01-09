@@ -1,3 +1,0 @@
-#:schema https://raw.githubusercontent.com/cloudflare/wrangler/main/packages/wrangler/config-schema.json
-name = "al-nouran"
-pages_build_output_dir = "dist/public"
