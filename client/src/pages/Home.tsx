@@ -1,21 +1,22 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { 
-  ArrowRight, 
-  Settings, 
-  Zap, 
-  Factory, 
-  Ship, 
-  CheckCircle2, 
-  Menu, 
-  X, 
-  Phone, 
-  Mail, 
-  MapPin, 
+import {
+  ArrowRight,
+  Settings,
+  Zap,
+  Factory,
+  Ship,
+  CheckCircle2,
+  Menu,
+  X,
+  Phone,
+  Mail,
+  MapPin,
   ChevronRight,
   Hammer
 } from "lucide-react";
 import heroImage from "@assets/generated_images/dark_industrial_factory_background_with_amber_sparks.png";
+import logoImage from "@assets/generated_images/al_nouran_logo.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
@@ -47,26 +48,24 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-accent selection:text-accent-foreground">
       {/* Navbar */}
-      <nav 
-        className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-primary/95 backdrop-blur-md shadow-lg py-4" : "bg-transparent py-6"
-        }`}
+      <nav
+        className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-primary/95 backdrop-blur-md shadow-lg py-4" : "bg-transparent py-6"
+          }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-accent rounded-sm flex items-center justify-center">
-              <Zap className="text-primary w-6 h-6" />
-            </div>
-            <span className={`text-2xl font-heading font-bold tracking-tight ${isScrolled ? "text-white" : "text-white"}`}>
-              AL-NOURAN
-            </span>
+          <div className="flex items-center">
+            <img
+              src={logoImage}
+              alt="Al-Nouran International Company"
+              className="h-12 w-auto object-contain"
+            />
           </div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {["Home", "About Us", "Industries", "Contact"].map((item) => (
-              <a 
-                key={item} 
+              <a
+                key={item}
                 href={`#${item.toLowerCase().replace(" ", "-")}`}
                 className="text-sm font-medium text-slate-200 hover:text-accent transition-colors uppercase tracking-wider"
               >
@@ -79,7 +78,7 @@ export default function Home() {
           </div>
 
           {/* Mobile Toggle */}
-          <button 
+          <button
             className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -89,14 +88,14 @@ export default function Home() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             className="md:hidden bg-primary border-t border-slate-800"
           >
             <div className="flex flex-col p-6 gap-4">
               {["Home", "About Us", "Industries", "Contact"].map((item) => (
-                <a 
+                <a
                   key={item}
                   href={`#${item.toLowerCase().replace(" ", "-")}`}
                   className="text-slate-300 hover:text-accent font-medium"
@@ -119,16 +118,16 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-primary/80 mix-blend-multiply z-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent z-10" />
-          <img 
-            src={heroImage} 
-            alt="Industrial Factory" 
+          <img
+            src={heroImage}
+            alt="Industrial Factory"
             className="w-full h-full object-cover"
           />
         </div>
 
         {/* Content */}
         <div className="container mx-auto px-6 relative z-20 pt-20">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
@@ -141,21 +140,21 @@ export default function Home() {
               </span>
             </motion.div>
 
-            <motion.h1 
+            <motion.h1
               variants={fadeInUp}
               className="text-5xl md:text-7xl lg:text-8xl font-heading font-black text-white leading-[1.1] mb-8"
             >
-              EMPOWERING <br/>
+              EMPOWERING <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
                 INDUSTRY
               </span>
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               variants={fadeInUp}
               className="text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed mb-10 border-l-4 border-accent pl-6"
             >
-              Your premier partner for high-grade electrical hardware, CNC machinery, 
+              Your premier partner for high-grade electrical hardware, CNC machinery,
               and industrial solutions. Precision engineering for a powerful future.
             </motion.p>
 
@@ -182,7 +181,7 @@ export default function Home() {
                 <div className="h-[2px] w-full bg-slate-200" />
               </div>
               <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-8 leading-tight">
-                Bridging Global Innovation & <br/>Local Industry
+                Bridging Global Innovation & <br />Local Industry
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed mb-6">
                 At Al-Nouran International Company, we specialize in importing and supplying top-tier electrical hardware, electromechanical systems, and heavy machinery.
@@ -190,7 +189,7 @@ export default function Home() {
               <p className="text-slate-600 text-lg leading-relaxed mb-8">
                 Our mission is to equip factories and industrial sectors with the reliable technology they need to operate efficiently. We don't just supply parts; we power progress.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-8 border-t border-slate-200 pt-8">
                 <div>
                   <h4 className="text-4xl font-bold text-primary mb-1">25+</h4>
@@ -202,13 +201,13 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="absolute -inset-4 border-2 border-accent/20 z-0 rounded-sm translate-x-4 translate-y-4" />
               <div className="bg-slate-100 aspect-[4/5] relative z-10 rounded-sm overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" 
-                  alt="Industrial Engineer" 
+                <img
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+                  alt="Industrial Engineer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-primary/90 p-8 backdrop-blur-sm">
@@ -296,12 +295,12 @@ export default function Home() {
             <div>
               <span className="text-accent font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Our Advantage</span>
               <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8">
-                Why Industry Leaders <br/><span className="text-accent">Trust Us</span>
+                Why Industry Leaders <br /><span className="text-accent">Trust Us</span>
               </h2>
               <p className="text-slate-300 text-lg mb-10 max-w-md">
                 We combine technical expertise with robust supply chains to deliver exactly what you need, when you need it.
               </p>
-              
+
               <div className="space-y-6">
                 {[
                   "Global Sourcing Capabilities from Tier-1 Manufacturers",
@@ -309,12 +308,12 @@ export default function Home() {
                   "Specialized Expertise in CNC & Welding Technology",
                   "Rapid Logistics for Free Zones & Industrial Parks"
                 ].map((item, i) => (
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    key={i} 
+                    key={i}
                     className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-sm hover:border-accent/50 transition-colors"
                   >
                     <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0" />
@@ -323,13 +322,13 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            
+
             <div className="flex items-center justify-center">
               <div className="grid grid-cols-2 gap-4 w-full max-w-lg">
-                 <div className="bg-accent h-40 rounded-sm w-full" />
-                 <div className="bg-slate-700 h-40 rounded-sm w-full translate-y-8" />
-                 <div className="bg-slate-600 h-40 rounded-sm w-full -translate-y-8" />
-                 <div className="bg-white h-40 rounded-sm w-full" />
+                <div className="bg-accent h-40 rounded-sm w-full" />
+                <div className="bg-slate-700 h-40 rounded-sm w-full translate-y-8" />
+                <div className="bg-slate-600 h-40 rounded-sm w-full -translate-y-8" />
+                <div className="bg-white h-40 rounded-sm w-full" />
               </div>
             </div>
           </div>
@@ -341,19 +340,18 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-1">
-              <div className="flex items-center gap-2 mb-6">
-                <div className="w-8 h-8 bg-accent rounded-sm flex items-center justify-center">
-                  <Zap className="text-primary w-5 h-5" />
-                </div>
-                <span className="text-xl font-heading font-bold tracking-tight">
-                  AL-NOURAN
-                </span>
+              <div className="flex items-center mb-6">
+                <img
+                  src={logoImage}
+                  alt="Al-Nouran International Company"
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <p className="text-slate-400 text-sm leading-relaxed mb-6">
                 Your premier partner for high-grade electrical hardware, CNC machinery, and industrial solutions.
               </p>
             </div>
-            
+
             <div>
               <h4 className="font-bold text-lg mb-6 text-white">Quick Links</h4>
               <ul className="space-y-3">
@@ -366,7 +364,7 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-bold text-lg mb-6 text-white">Industries</h4>
               <ul className="space-y-3">
@@ -379,7 +377,7 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-bold text-lg mb-6 text-white">Contact Us</h4>
               <ul className="space-y-4">
@@ -398,7 +396,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-500 text-sm">
               © 2024 Al-Nouran International Company. All rights reserved.
